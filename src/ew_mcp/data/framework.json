@@ -1,0 +1,522 @@
+{
+ "disaggregates": [
+  {
+   "name": "Race and ethnicity",
+   "sectors": [
+    "Pre-K",
+    "K-12",
+    "Postsecondary",
+    "Workforce"
+   ],
+   "url": "https://educationtoworkforce.org/disaggregates/race-and-ethnicity"
+  },
+  {
+   "name": "Gender",
+   "sectors": [
+    "Pre-K",
+    "K-12",
+    "Postsecondary",
+    "Workforce"
+   ],
+   "url": "https://educationtoworkforce.org/disaggregates/gender"
+  },
+  {
+   "name": "LGBT status",
+   "sectors": [
+    "K-12",
+    "Postsecondary",
+    "Workforce"
+   ],
+   "url": "https://educationtoworkforce.org/disaggregates/lgbt-status"
+  },
+  {
+   "name": "Disability status",
+   "sectors": [
+    "Pre-K",
+    "K-12",
+    "Postsecondary",
+    "Workforce"
+   ],
+   "url": "https://educationtoworkforce.org/disaggregates/disability-status"
+  },
+  {
+   "name": "Income level",
+   "sectors": [
+    "Pre-K",
+    "K-12",
+    "Postsecondary",
+    "Workforce"
+   ],
+   "url": "https://educationtoworkforce.org/disaggregates/income-level"
+  },
+  {
+   "name": "Parental education level",
+   "sectors": [
+    "Pre-K",
+    "K-12",
+    "Postsecondary",
+    "Workforce"
+   ],
+   "url": "https://educationtoworkforce.org/disaggregates/parental-education-level"
+  },
+  {
+   "name": "First-generation college student",
+   "sectors": [
+    "K-12",
+    "Postsecondary"
+   ],
+   "url": "https://educationtoworkforce.org/disaggregates/first-generation-college-student"
+  },
+  {
+   "name": "Student from migrant family household",
+   "sectors": [
+    "Pre-K",
+    "K-12"
+   ],
+   "url": "https://educationtoworkforce.org/disaggregates/student-migrant-family-household"
+  },
+  {
+   "name": "Home language",
+   "sectors": [
+    "Pre-K",
+    "K-12",
+    "Postsecondary",
+    "Workforce"
+   ],
+   "url": "https://educationtoworkforce.org/disaggregates/home-language"
+  },
+  {
+   "name": "English learner",
+   "sectors": [
+    "Pre-K",
+    "K-12",
+    "Postsecondary",
+    "Workforce"
+   ],
+   "url": "https://educationtoworkforce.org/disaggregates/english-learner"
+  },
+  {
+   "name": "Attendance intensity",
+   "sectors": [
+    "Pre-K",
+    "K-12",
+    "Postsecondary"
+   ],
+   "url": "https://educationtoworkforce.org/disaggregates/attendance-intensity"
+  },
+  {
+   "name": "K-12 school type",
+   "sectors": [
+    "K-12"
+   ],
+   "url": "https://educationtoworkforce.org/disaggregates/k-12-school-type"
+  },
+  {
+   "name": "Postsecondary institution classification",
+   "sectors": [
+    "Postsecondary"
+   ],
+   "url": "https://educationtoworkforce.org/disaggregates/postsecondary-institution-classification"
+  },
+  {
+   "name": "Transfer enrollment status",
+   "sectors": [
+    "Postsecondary"
+   ],
+   "url": "https://educationtoworkforce.org/disaggregates/transfer-enrollment-status"
+  },
+  {
+   "name": "Credential-seeking status",
+   "sectors": [
+    "Postsecondary"
+   ],
+   "url": "https://educationtoworkforce.org/disaggregates/credential-seeking-status"
+  },
+  {
+   "name": "Student parenting status",
+   "sectors": [
+    "Postsecondary"
+   ],
+   "url": "https://educationtoworkforce.org/disaggregates/student-parenting-status"
+  },
+  {
+   "name": "Postsecondary major",
+   "sectors": [
+    "Postsecondary",
+    "Workforce"
+   ],
+   "url": "https://educationtoworkforce.org/disaggregates/postsecondary-major"
+  },
+  {
+   "name": "Occupation category",
+   "sectors": [
+    "Workforce"
+   ],
+   "url": "https://educationtoworkforce.org/disaggregates/occupation-category"
+  },
+  {
+   "name": "Dislocated worker status",
+   "sectors": [
+    "Postsecondary",
+    "Workforce"
+   ],
+   "url": "https://educationtoworkforce.org/disaggregates/dislocated-worker-status"
+  },
+  {
+   "name": "Basic skills level",
+   "sectors": [
+    "Workforce"
+   ],
+   "url": "https://educationtoworkforce.org/disaggregates/basic-skills-level"
+  },
+  {
+   "name": "Age group (for example, adult learners)",
+   "sectors": [
+    "Pre-K",
+    "K-12",
+    "Postsecondary",
+    "Workforce"
+   ],
+   "url": "https://educationtoworkforce.org/disaggregates/age-group-example-adult-learners"
+  },
+  {
+   "name": "Urbanicity",
+   "sectors": [
+    "Pre-K",
+    "K-12",
+    "Postsecondary",
+    "Workforce"
+   ],
+   "url": "https://educationtoworkforce.org/disaggregates/urbanicity"
+  },
+  {
+   "name": "Individuals experiencing homelessness",
+   "sectors": [
+    "Pre-K",
+    "K-12",
+    "Postsecondary",
+    "Workforce"
+   ],
+   "url": "https://educationtoworkforce.org/disaggregates/individuals-experiencing-homelessness"
+  },
+  {
+   "name": "Individual or family military status",
+   "sectors": [
+    "Pre-K",
+    "K-12",
+    "Postsecondary",
+    "Workforce"
+   ],
+   "url": "https://educationtoworkforce.org/disaggregates/individual-or-family-military-status"
+  },
+  {
+   "name": "Individual with current or past child welfare involvement",
+   "sectors": [
+    "Pre-K",
+    "K-12",
+    "Postsecondary"
+   ],
+   "url": "https://educationtoworkforce.org/disaggregates/individual-current-or-past-child-welfare-involvement"
+  },
+  {
+   "name": "Justice involvement",
+   "sectors": [
+    "K-12",
+    "Postsecondary",
+    "Workforce"
+   ],
+   "url": "https://educationtoworkforce.org/disaggregates/justice-involvement"
+  }
+ ],
+ "evidence_based_practices": [
+  {
+   "name": "Teacher coaching and professional development",
+   "sectors": [
+    "Pre-K"
+   ],
+   "url": "https://educationtoworkforce.org/evidence-based-practices/teacher-coaching-and-professional-development"
+  },
+  {
+   "name": "Skill-based curricula",
+   "sectors": [
+    "Pre-K"
+   ],
+   "url": "https://educationtoworkforce.org/evidence-based-practices/skill-based-curricula"
+  },
+  {
+   "name": "Social skills training",
+   "sectors": [
+    "Pre-K"
+   ],
+   "url": "https://educationtoworkforce.org/evidence-based-practices/social-skills-training"
+  },
+  {
+   "name": "Parent programs",
+   "sectors": [
+    "Pre-K"
+   ],
+   "url": "https://educationtoworkforce.org/evidence-based-practices/parent-programs"
+  },
+  {
+   "name": "Response to Intervention",
+   "sectors": [
+    "K-12"
+   ],
+   "url": "https://educationtoworkforce.org/evidence-based-practices/response-intervention"
+  },
+  {
+   "name": "High-impact tutoring",
+   "sectors": [
+    "K-12"
+   ],
+   "url": "https://educationtoworkforce.org/evidence-based-practices/high-impact-tutoring"
+  },
+  {
+   "name": "Out-of-school programs (such as summer programs)",
+   "sectors": [
+    "K-12"
+   ],
+   "url": "https://educationtoworkforce.org/evidence-based-practices/out-school-programs-such-summer-programs"
+  },
+  {
+   "name": "Evidence-based curricula",
+   "sectors": [
+    "K-12"
+   ],
+   "url": "https://educationtoworkforce.org/evidence-based-practices/evidence-based-curricula"
+  },
+  {
+   "name": "SEL curricula and programs (growth mindset)",
+   "sectors": [
+    "K-12"
+   ],
+   "url": "https://educationtoworkforce.org/evidence-based-practices/sel-curricula-and-programs-growth-mindset"
+  },
+  {
+   "name": "Intensive, individualized support for students off track on early warning indicators",
+   "sectors": [
+    "K-12"
+   ],
+   "url": "https://educationtoworkforce.org/evidence-based-practices/intensive-individualized-support-students-track-early-warning-indicators"
+  },
+  {
+   "name": "Small, personalized learning communities",
+   "sectors": [
+    "K-12"
+   ],
+   "url": "https://educationtoworkforce.org/evidence-based-practices/small-personalized-learning-communities"
+  },
+  {
+   "name": "Accelerated postsecondary pathways",
+   "sectors": [
+    "K-12"
+   ],
+   "url": "https://educationtoworkforce.org/evidence-based-practices/accelerated-postsecondary-pathways"
+  },
+  {
+   "name": "Career pathway programs",
+   "sectors": [
+    "K-12"
+   ],
+   "url": "https://educationtoworkforce.org/evidence-based-practices/career-pathway-programs"
+  },
+  {
+   "name": "Financial aid advising and hands-on assistance",
+   "sectors": [
+    "K-12"
+   ],
+   "url": "https://educationtoworkforce.org/evidence-based-practices/financial-aid-advising-and-hands-assistance"
+  },
+  {
+   "name": "Enhanced college advising",
+   "sectors": [
+    "K-12"
+   ],
+   "url": "https://educationtoworkforce.org/evidence-based-practices/enhanced-college-advising"
+  },
+  {
+   "name": "Co-requisite support",
+   "sectors": [
+    "Postsecondary"
+   ],
+   "url": "https://educationtoworkforce.org/evidence-based-practices/co-requisite-support"
+  },
+  {
+   "name": "Comprehensive, integrated advising",
+   "sectors": [
+    "Postsecondary"
+   ],
+   "url": "https://educationtoworkforce.org/evidence-based-practices/comprehensive-integrated-advising"
+  },
+  {
+   "name": "Mentoring and coaching",
+   "sectors": [
+    "Postsecondary"
+   ],
+   "url": "https://educationtoworkforce.org/evidence-based-practices/mentoring-and-coaching"
+  },
+  {
+   "name": "Financial incentives for students",
+   "sectors": [
+    "Postsecondary"
+   ],
+   "url": "https://educationtoworkforce.org/evidence-based-practices/financial-incentives-students"
+  },
+  {
+   "name": "Digital learning",
+   "sectors": [
+    "Postsecondary"
+   ],
+   "url": "https://educationtoworkforce.org/evidence-based-practices/digital-learning"
+  },
+  {
+   "name": "SEL curricula and programs (self-regulated learning)",
+   "sectors": [
+    "Postsecondary"
+   ],
+   "url": "https://educationtoworkforce.org/evidence-based-practices/sel-curricula-and-programs-self-regulated-learning"
+  },
+  {
+   "name": "Contextualized or integrated basic skills instruction in occupational training",
+   "sectors": [
+    "Postsecondary"
+   ],
+   "url": "https://educationtoworkforce.org/evidence-based-practices/contextualized-or-integrated-basic-skills-instruction-occupational"
+  },
+  {
+   "name": "Intentionally designed career pathway programs",
+   "sectors": [
+    "Postsecondary"
+   ],
+   "url": "https://educationtoworkforce.org/evidence-based-practices/intentionally-designed-career-pathway-programs"
+  },
+  {
+   "name": "Employer partnerships with CTE programs",
+   "sectors": [
+    "Workforce"
+   ],
+   "url": "https://educationtoworkforce.org/evidence-based-practices/employer-partnerships-cte-programs"
+  },
+  {
+   "name": "Youth workforce development programs",
+   "sectors": [
+    "Workforce"
+   ],
+   "url": "https://educationtoworkforce.org/evidence-based-practices/youth-workforce-development-programs"
+  },
+  {
+   "name": "Sector-oriented job training programs",
+   "sectors": [
+    "Workforce"
+   ],
+   "url": "https://educationtoworkforce.org/evidence-based-practices/sector-oriented-job-training-programs"
+  }
+ ],
+ "data_equity_principles": [
+  {
+   "number": 1,
+   "text": "Employ ethical behavior to respect the rights of individuals who provide data, promote greater equity and well-being, and minimize the risk of harm. Data users must assess whether practices advance equity, address structural inequities, prevent harm, and involve communities in accountable decision-making. View Details"
+  },
+  {
+   "number": 2,
+   "text": "Protect the privacy of individuals who provide data while ensuring appropriate ownership and access to information. Data users must get consent, protect privacy, respect data sovereignty, and give people control over how their data is accessed and used. View Details"
+  },
+  {
+   "number": 3,
+   "text": "Disaggregate data on both outcomes and system conditions to analyze disparities, monitor progress, and guide action. Data users must disaggregate data to reflect diverse, intersecting experiences and reveal disparities in outcomes and system conditions. View Details"
+  },
+  {
+   "number": 4,
+   "text": "Examine social and historical contexts to identify root causes of disparities, inform data collection and use, and develop data-driven solutions. To address inequities from pre-K to workforce, data users must understand local context, structural barriers, and community-identified root causes. View Details"
+  },
+  {
+   "number": 5,
+   "text": "Question default methods and assumptions for data collection and analysis and triangulate quantitative data with other sources. Data users must question methods, address bias, and combine data sources and community input for fuller, more equitable insights. View Details"
+  },
+  {
+   "number": 6,
+   "text": "Ensure data visualizations promote inclusion and awareness across culturally, linguistically, and racially diverse audiences. Data visualizations should be accessible, contextualized, and designed to avoid reinforcing stereotypes or misrepresenting lived experiences. View Details"
+  },
+  {
+   "number": 7,
+   "text": "Restore communities as data experts using culturally responsive approaches to engagement and co-creation that support equitable data use. Community partners are essential to equitable data work and should be engaged meaningfully, compensated fairly, and empowered to drive change. View Details"
+  },
+  {
+   "number": 8,
+   "text": "Establish inclusive data governance structures and practices with transparent decision-making processes. Data governance should set rules for data use and access, with inclusive, transparent structures that build trust and shared accountability. View Details"
+  }
+ ],
+ "goals": [
+  {
+   "number": 1,
+   "title": "Promote Developmental Progress in Pre-K",
+   "url": "https://educationtoworkforce.org/apply/goal-1-promote-developmental-progress-pre-k"
+  },
+  {
+   "number": 2,
+   "title": "Advance K-12 Student Outcomes",
+   "url": "https://educationtoworkforce.org/apply/goal-2-advance-k-12-student-outcomes"
+  },
+  {
+   "number": 3,
+   "title": "Improve Educational Experiences",
+   "url": "https://educationtoworkforce.org/apply/goal-3-improve-educational-experiences"
+  },
+  {
+   "number": 4,
+   "title": "Support Postsecondary Transitions and Success",
+   "url": "https://educationtoworkforce.org/apply/goal-4-support-postsecondary-transitions-and-success"
+  },
+  {
+   "number": 5,
+   "title": "Support Workforce Transitions and Success",
+   "url": "https://educationtoworkforce.org/apply/goal-5-support-workforce-transitions-and-success"
+  },
+  {
+   "number": 6,
+   "title": "Strengthen Data Systems",
+   "url": "https://educationtoworkforce.org/apply/goal-6-strengthen-data-systems"
+  },
+  {
+   "number": 7,
+   "title": "Make Informed Decisions About Funding, Research, and Programs",
+   "url": "https://educationtoworkforce.org/apply/goal-7-make-informed-decisions"
+  }
+ ],
+ "faq": [
+  {
+   "question": "What is the E-W Framework?",
+   "answer": "The E-W Framework is a public resource designed to promote data collection and use that advances educational and economic opportunity for all. The framework synthesizes leading thinking in the field to provide a coherent set of indicators that center equity and reflect the full pre-K-to-workforce continuum. The framework’s primary goal is to encourage greater cross-sector collaboration and alignment across local, state, and national data systems by promoting the use of a common set of metrics and principles to assess and address disparities from pre-K into the workforce. See also: Framework at a glance"
+  },
+  {
+   "question": "What makes this framework unique?",
+   "answer": "Whereas many existing indicator frameworks focus on a limited number of pre-K-to-workforce sectors or specific types of indicators, the E-W Framework draws on the strengths of 41 existing frameworks to recommend a comprehensive set of indicators spanning the full pre-K-to-workforce continuum across multiple indicator types (including outcomes and milestones as well as system conditions) and domains (including academic progress and completion; social, emotional, and physical well-being; and career readiness and economic success). The framework also offers guidance for ethical and effective data use, essential questions and measures that matter most, ways to disaggregate data to inform action, and evidence-based practices to drive positive change. See also: Source frameworks at a glance"
+  },
+  {
+   "question": "How were framework indicators selected?",
+   "answer": "We began by reviewing 41 existing indicator frameworks to identify over 250 “candidate indicators.” We then reviewed existing research and prioritized indicators based on defined criteria in collaboration with researchers, policymakers, practitioners, and community advocates with diverse experience and from a wide variety of organizations. Based on input from these advisory groups, we selected 99 indicators for inclusion in the final framework, each of which are associated with one or more recommended metrics. For more information on indicator review criteria, see Appendix C of the framework report . See also: Indicators at a glance , Source frameworks at a glance"
+  },
+  {
+   "question": "Who are the key audiences for the framework?",
+   "answer": "The E-W Framework is designed for a broad group of policymakers, administrators and educators, community organizations and advocates, funders, and researchers who use education and workforce data to diagnose inequities, implement evidence-based decisions, and evaluate and monitor the impact of policies, programs, and investments to address those inequities. See also: Framework at a glance"
+  },
+  {
+   "question": "What are the framework’s data equity principles?",
+   "answer": "The framework’s seven data equity principles offer guidance for how to minimize harm and promote greater equity in projects or initiatives involving data collection and use. Data can be a powerful tool for promoting equity when used ethically and effectively, but data are not inherently neutral. Like any tool, they require thoughtful use and careful handling. How we collect, access, analyze, and report data can have serious and potentially harmful impacts on individuals and communities. The principles are based on a synthesis of existing literature and were developed with a diverse range of partners, including education and workforce policymakers and data strategists, researchers, equity advocates, and parents and educators. See also: Data equity principles at a glance"
+  },
+  {
+   "question": "Does the framework include outcome data for the indicators?",
+   "answer": "Although the framework does not provide comprehensive outcome data, each indicator is associated with a description of “why it matters” – that is, justification for the indicator’s inclusion in the framework, which often includes statistics about disparities among student sub-groups. For each indicator, we also provide information on “what to know about measurement,” which details any limitations or considerations users should be aware of related to the proposed measure(s), as well as information on where these data are currently collected and at what levels (e.g., state, federal). See also: Indicators at a glance, “how to read an indicator profile” (p. 3)"
+  },
+  {
+   "question": "Does the framework include technical guidance for data system leaders?",
+   "answer": "Given the wide variation in data system needs and governance models across states and localities, the framework itself does not include technical guidance for linking and managing data systems. We encourage data system leaders to use the framework as a starting point to identify the essential questions and measures that matter most in their contexts, then explore additional technical resources from our partners, such as the websites for the Council of Chief State School Officers’ P20W Data Accelerator or WestEd’s P20W+ Planning for a Modern State Data System."
+  },
+  {
+   "question": "Can your team give a presentation to my organization?",
+   "answer": "Yes! Our team can share a list of session options, ranging from short overview sessions to more intensive deep dives into specific components of the framework, such as framework indicators or the data equity principles. Contact us for more information."
+  }
+ ],
+ "fetched_at": "2026-08-02T18:03:40+00:00",
+ "source": "https://educationtoworkforce.org"
+}

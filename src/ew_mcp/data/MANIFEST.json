@@ -1,0 +1,335 @@
+{
+ "upstream_repo": "UrbanInstitute/education-to-workforce",
+ "upstream_commit": "eaaa0a299bd43868a2cb7c6cbb5d370c59df9272",
+ "upstream_url": "https://github.com/UrbanInstitute/education-to-workforce/tree/eaaa0a299bd43868a2cb7c6cbb5d370c59df9272",
+ "built_at": "2026-07-30T13:29:12+00:00",
+ "rows": {
+  "observations": 11841105,
+  "places": 14090,
+  "context": 3208
+ },
+ "bytes": {
+  "ew.parquet": 23198582,
+  "ew_context.parquet": 216007,
+  "ew_names.parquet": 201117
+ },
+ "coverage": {
+  "national": {
+   "observations": 1621,
+   "places": 1,
+   "metrics": 59
+  },
+  "state": {
+   "observations": 83164,
+   "places": 56,
+   "metrics": 68
+  },
+  "county": {
+   "observations": 3288862,
+   "places": 3144,
+   "metrics": 62
+  },
+  "district": {
+   "observations": 8467458,
+   "places": 10889,
+   "metrics": 35
+  }
+ },
+ "validation": {
+  "duplicate_metric_ids": {
+   "222": 2
+  },
+  "in_data_no_metadata": [
+   56,
+   57,
+   77,
+   190,
+   224
+  ],
+  "in_tool_no_data": [
+   222
+  ],
+  "in_tool_missing_metric_type": [
+   222,
+   222
+  ],
+  "in_tool_missing_source_label": [
+   222,
+   222,
+   231,
+   232,
+   233,
+   234
+  ],
+  "disag_in_data_not_in_metadata": [
+   "d3_nodisab"
+  ],
+  "years_available_mismatch_count": 22,
+  "years_available_mismatch": [
+   {
+    "metric_id": 63,
+    "claimed": [
+     0,
+     1,
+     2,
+     7
+    ],
+    "actual": [
+     2017
+    ]
+   },
+   {
+    "metric_id": 64,
+    "claimed": [
+     0,
+     1,
+     2,
+     7
+    ],
+    "actual": [
+     2017
+    ]
+   },
+   {
+    "metric_id": 65,
+    "claimed": [
+     0,
+     1,
+     2,
+     7
+    ],
+    "actual": [
+     2017
+    ]
+   },
+   {
+    "metric_id": 87,
+    "claimed": [
+     0,
+     1,
+     2
+    ],
+    "actual": [
+     2021
+    ]
+   },
+   {
+    "metric_id": 89,
+    "claimed": [
+     0,
+     1,
+     2
+    ],
+    "actual": [
+     2021
+    ]
+   },
+   {
+    "metric_id": 90,
+    "claimed": [
+     0,
+     1,
+     2
+    ],
+    "actual": [
+     2021
+    ]
+   },
+   {
+    "metric_id": 91,
+    "claimed": [
+     0,
+     1,
+     2
+    ],
+    "actual": [
+     2021
+    ]
+   },
+   {
+    "metric_id": 94,
+    "claimed": [
+     0,
+     1,
+     2
+    ],
+    "actual": [
+     2021
+    ]
+   },
+   {
+    "metric_id": 95,
+    "claimed": [
+     0,
+     1,
+     2
+    ],
+    "actual": [
+     2021
+    ]
+   },
+   {
+    "metric_id": 96,
+    "claimed": [
+     0,
+     1,
+     2
+    ],
+    "actual": [
+     2021
+    ]
+   },
+   {
+    "metric_id": 99,
+    "claimed": [
+     0,
+     1,
+     2
+    ],
+    "actual": [
+     2021
+    ]
+   },
+   {
+    "metric_id": 100,
+    "claimed": [
+     0,
+     1,
+     2
+    ],
+    "actual": [
+     2021
+    ]
+   },
+   {
+    "metric_id": 101,
+    "claimed": [
+     0,
+     1,
+     2
+    ],
+    "actual": [
+     2021
+    ]
+   },
+   {
+    "metric_id": 106,
+    "claimed": [
+     0,
+     1,
+     2,
+     7
+    ],
+    "actual": [
+     2017
+    ]
+   },
+   {
+    "metric_id": 119,
+    "claimed": [
+     2013,
+     2015,
+     2017,
+     2020,
+     2021
+    ],
+    "actual": [
+     2015,
+     2017,
+     2020,
+     2021
+    ]
+   },
+   {
+    "metric_id": 170,
+    "claimed": [
+     0,
+     2
+    ],
+    "actual": [
+     2022
+    ]
+   },
+   {
+    "metric_id": 181,
+    "claimed": [
+     2013,
+     2015,
+     2017,
+     2021
+    ],
+    "actual": [
+     2013,
+     2015,
+     2017
+    ]
+   },
+   {
+    "metric_id": 183,
+    "claimed": [
+     0,
+     1,
+     2
+    ],
+    "actual": [
+     2021
+    ]
+   },
+   {
+    "metric_id": 184,
+    "claimed": [
+     0,
+     1,
+     2
+    ],
+    "actual": [
+     2021
+    ]
+   },
+   {
+    "metric_id": 185,
+    "claimed": [
+     0,
+     1,
+     2
+    ],
+    "actual": [
+     2021
+    ]
+   }
+  ]
+ },
+ "collection_warnings": [
+  "district/0499997: no data block",
+  "district/0699997: no data block",
+  "district/1899997: no data block",
+  "district/2199997: no data block",
+  "district/2382004: no data block",
+  "district/2382006: no data block",
+  "district/2382007: no data block",
+  "district/2382013: no data block",
+  "district/2799997: no data block",
+  "district/3399997: no data block",
+  "district/3699997: no data block",
+  "district/3700148: no data block",
+  "district/3700153: no data block",
+  "district/3700383: no data block",
+  "district/3904896: no data block",
+  "district/3999997: no data block",
+  "district/4199997: no data block",
+  "district/4299997: no data block",
+  "district/4599997: no data block",
+  "district/4799997: no data block",
+  "district/5000011: no data block",
+  "district/5000013: no data block",
+  "district/5000014: no data block",
+  "district/5000015: no data block",
+  "district/5000016: no data block",
+  "district/5000017: no data block",
+  "district/5000018: no data block",
+  "district/5000019: no data block",
+  "district/5599997: no data block",
+  "district/5699997: no data block"
+ ],
+ "collection_warning_count": 30
+}
