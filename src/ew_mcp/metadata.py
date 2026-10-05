@@ -8,7 +8,7 @@ Everything here is small (~170 KB) and read constantly, so it is loaded once
 into memory rather than queried.
 
 One rule throughout: coverage claims come from DATA, not from metadata.
-`metrics.json.years_available` disagreed with the actual data for 22 metrics in
+`metrics.json.years_available` disagreed with the actual data for 23 metrics in
 the current build, so it is treated as a claim to reconcile, never a fact to
 report. See loader.coverage.
 """
@@ -21,7 +21,6 @@ from functools import lru_cache
 from typing import Any
 
 from ew_mcp.constants import (
-    DISAG_LABEL_FIXES,
     FRAMEWORK_DISAG_CROSSWALK,
     UNDOCUMENTED_METRIC_NOTE,
     UNDOCUMENTED_METRICS,
@@ -64,10 +63,10 @@ def _load(stem: str):
 def metrics() -> dict[int, dict]:
     """metric_id -> record.
 
-    Upstream has a DUPLICATE primary key: metric_id 222 appears twice, with two
-    entirely different metrics (child-care subsidies, SNAP participation). We do
-    not fail on it — an upstream typo should not block every rebuild — and we do
-    not guess which is intended. The first record wins deterministically and the
+    Upstream has shipped a DUPLICATE primary key before (metric_id 222 twice,
+    for two different metrics, until aee1e9ed). We do not fail on one — an
+    upstream typo should not block every rebuild — and we do not guess which is
+    intended. The first record wins deterministically and the
     collision is recorded on the survivor so it can be surfaced rather than hidden.
     """
     out: dict[int, dict] = {}
@@ -134,8 +133,8 @@ def recommended_disaggregates() -> list[str]:
 def queryable_dimensions() -> list[str]:
     """Category names for dimensions that actually have rows.
 
-    Not the same as the seven the metadata declares: `Income` (d7) is declared
-    and empty. Quoting the declared count at a user promises a breakdown that
+    Not necessarily the seven the metadata declares: `Income` (d7) was declared
+    and empty until aee1e9ed. Quoting the declared count at a user promises a breakdown that
     cannot be produced, so every user-facing count comes from here.
     """
     from ew_mcp.loader import dimensions_in_data
@@ -177,16 +176,8 @@ def match_recommended_disaggregate(name: str) -> str | None:
 
 @lru_cache(maxsize=1)
 def disag_labels() -> dict[str, str]:
-    """Disaggregate code -> display label.
-
-    DISAG_LABEL_FIXES patches `d3_nodisab`, which the data uses but
-    disaggregates.json spells `d3_nodsab`. It is the only disaggregate value in
-    the data with no metadata entry; unpatched it renders a real category as a
-    bare code. Display-layer correction only — the stored value is untouched.
-    """
-    out = {f["value"]: f["label"] for d in disaggregates() for f in d["fields"]}
-    out.update(DISAG_LABEL_FIXES)
-    return out
+    """Disaggregate code -> display label, verbatim from disaggregates.json."""
+    return {f["value"]: f["label"] for d in disaggregates() for f in d["fields"]}
 
 
 @lru_cache(maxsize=1)

@@ -1,71 +1,68 @@
 {
  "upstream_repo": "UrbanInstitute/education-to-workforce",
- "upstream_commit": "eaaa0a299bd43868a2cb7c6cbb5d370c59df9272",
- "upstream_url": "https://github.com/UrbanInstitute/education-to-workforce/tree/eaaa0a299bd43868a2cb7c6cbb5d370c59df9272",
- "built_at": "2026-07-30T13:29:12+00:00",
+ "upstream_commit": "aee1e9ed9dd98b7ad8b001ab39af5e7ea1dee14a",
+ "upstream_url": "https://github.com/UrbanInstitute/education-to-workforce/tree/aee1e9ed9dd98b7ad8b001ab39af5e7ea1dee14a",
+ "built_at": "2026-10-05T16:08:49+00:00",
  "rows": {
-  "observations": 11841105,
+  "observations": 12166830,
   "places": 14090,
   "context": 3208
  },
  "bytes": {
-  "ew.parquet": 23198582,
-  "ew_context.parquet": 216007,
+  "ew.parquet": 24256990,
+  "ew_context.parquet": 159370,
   "ew_names.parquet": 201117
  },
  "coverage": {
   "national": {
-   "observations": 1621,
+   "observations": 1673,
    "places": 1,
-   "metrics": 59
+   "metrics": 60
   },
   "state": {
-   "observations": 83164,
+   "observations": 85796,
    "places": 56,
-   "metrics": 68
+   "metrics": 69
   },
   "county": {
-   "observations": 3288862,
+   "observations": 3449435,
    "places": 3144,
-   "metrics": 62
+   "metrics": 63
   },
   "district": {
-   "observations": 8467458,
+   "observations": 8629926,
    "places": 10889,
    "metrics": 35
   }
  },
  "validation": {
-  "duplicate_metric_ids": {
-   "222": 2
-  },
-  "in_data_no_metadata": [
-   56,
-   57,
-   77,
-   190,
-   224
-  ],
+  "duplicate_metric_ids": {},
+  "in_data_no_metadata": [],
   "in_tool_no_data": [
    222
   ],
   "in_tool_missing_metric_type": [
-   222,
    222
   ],
   "in_tool_missing_source_label": [
-   222,
-   222,
-   231,
-   232,
-   233,
-   234
+   222
   ],
-  "disag_in_data_not_in_metadata": [
-   "d3_nodisab"
-  ],
-  "years_available_mismatch_count": 22,
+  "disag_in_data_not_in_metadata": [],
+  "years_available_mismatch_count": 23,
   "years_available_mismatch": [
+   {
+    "metric_id": 50,
+    "claimed": [
+     2018,
+     2023
+    ],
+    "actual": [
+     2017,
+     2018,
+     2022,
+     2023
+    ]
+   },
    {
     "metric_id": 63,
     "claimed": [
@@ -277,17 +274,6 @@
    },
    {
     "metric_id": 184,
-    "claimed": [
-     0,
-     1,
-     2
-    ],
-    "actual": [
-     2021
-    ]
-   },
-   {
-    "metric_id": 185,
     "claimed": [
      0,
      1,

@@ -293,11 +293,11 @@
    "url": "https://educationtoworkforce.org/evidence-based-practices/sel-curricula-and-programs-growth-mindset"
   },
   {
-   "name": "Intensive, individualized support for students off track on early warning indicators",
+   "name": "Individualized support for students off track",
    "sectors": [
     "K-12"
    ],
-   "url": "https://educationtoworkforce.org/evidence-based-practices/intensive-individualized-support-students-track-early-warning-indicators"
+   "url": "https://educationtoworkforce.org/evidence-based-practices/individualized-support-students-track"
   },
   {
    "name": "Small, personalized learning communities",
@@ -316,7 +316,9 @@
   {
    "name": "Career pathway programs",
    "sectors": [
-    "K-12"
+    "K-12",
+    "Postsecondary",
+    "Workforce"
    ],
    "url": "https://educationtoworkforce.org/evidence-based-practices/career-pathway-programs"
   },
@@ -328,11 +330,11 @@
    "url": "https://educationtoworkforce.org/evidence-based-practices/financial-aid-advising-and-hands-assistance"
   },
   {
-   "name": "Enhanced college advising",
+   "name": "High-quality K-12 advising",
    "sectors": [
     "K-12"
    ],
-   "url": "https://educationtoworkforce.org/evidence-based-practices/enhanced-college-advising"
+   "url": "https://educationtoworkforce.org/evidence-based-practices/high-quality-k-12-advising"
   },
   {
    "name": "Co-requisite support",
@@ -377,25 +379,18 @@
    "url": "https://educationtoworkforce.org/evidence-based-practices/sel-curricula-and-programs-self-regulated-learning"
   },
   {
-   "name": "Contextualized or integrated basic skills instruction in occupational training",
+   "name": "Integrated basic skills instruction in occupational training",
    "sectors": [
     "Postsecondary"
    ],
-   "url": "https://educationtoworkforce.org/evidence-based-practices/contextualized-or-integrated-basic-skills-instruction-occupational"
+   "url": "https://educationtoworkforce.org/evidence-based-practices/integrated-basic-skills-instruction-occupational-training"
   },
   {
-   "name": "Intentionally designed career pathway programs",
-   "sectors": [
-    "Postsecondary"
-   ],
-   "url": "https://educationtoworkforce.org/evidence-based-practices/intentionally-designed-career-pathway-programs"
-  },
-  {
-   "name": "Employer partnerships with CTE programs",
+   "name": "Employer partnerships with CTE and workforce programs",
    "sectors": [
     "Workforce"
    ],
-   "url": "https://educationtoworkforce.org/evidence-based-practices/employer-partnerships-cte-programs"
+   "url": "https://educationtoworkforce.org/evidence-based-practices/employer-partnerships-cte-and-workforce-programs"
   },
   {
    "name": "Youth workforce development programs",
@@ -415,7 +410,7 @@
  "data_equity_principles": [
   {
    "number": 1,
-   "text": "Employ ethical behavior to respect the rights of individuals who provide data, promote greater equity and well-being, and minimize the risk of harm. Data users must assess whether practices advance equity, address structural inequities, prevent harm, and involve communities in accountable decision-making. View Details"
+   "text": "Employ ethical behavior to respect the rights of individuals who provide data, promote greater equity and well-being, and minimize the risk of harm. Data users must assess whether practices advance equity, address structural inequities, prevent harm, and involve communities in accountable decisions. View Details"
   },
   {
    "number": 2,
@@ -517,6 +512,6 @@
    "answer": "Yes! Our team can share a list of session options, ranging from short overview sessions to more intensive deep dives into specific components of the framework, such as framework indicators or the data equity principles. Contact us for more information."
   }
  ],
- "fetched_at": "2026-08-02T18:03:40+00:00",
+ "fetched_at": "2026-10-05T15:30:21+00:00",
  "source": "https://educationtoworkforce.org"
 }

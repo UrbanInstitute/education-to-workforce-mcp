@@ -26,6 +26,7 @@ from ew_mcp.constants import (
     FRAMEWORK_EQ_URL,
     TOOL_URL,
     UNDOCUMENTED_METRICS,
+    UPSTREAM_COMMIT,
 )
 
 pytestmark = pytest.mark.skipif(
@@ -107,6 +108,8 @@ def test_currency_and_numeric_do_not_get_percent_treatment():
 
 
 def test_undocumented_metric_renders_raw_and_says_so():
+    if not UNDOCUMENTED_METRICS:
+        pytest.skip("every metric in the data has metadata at this pin")
     mid = UNDOCUMENTED_METRICS[0]
     assert md.metric(mid) is None
     assert "%" not in fmt.format_value(0.5, mid)  # never guess a unit
@@ -128,17 +131,13 @@ def test_null_disaggregate_is_total_not_all_students():
     assert fmt.disag_label(None) == "Total"
 
 
-def test_upstream_disaggregate_typo_is_patched_at_display_layer():
-    """Data says d3_nodisab; disaggregates.json says d3_nodsab.
+def test_every_disaggregate_in_the_data_has_a_label():
+    """An unlabelled code renders a real category as a bare code.
 
-    Unpatched this renders a real category as a bare code.
+    d3_nodisab was spelled d3_nodsab in disaggregates.json until aee1e9ed.
     """
-    label = fmt.disag_label("d3_nodisab")
-    assert label != "d3_nodisab"
-    assert "disabilit" in label.lower()
-    # ...and the raw stored value is untouched.
     codes = {r[0] for r in loader.query("select distinct disag from obs where disag is not null")}
-    assert "d3_nodisab" in codes
+    assert all(fmt.disag_label(c) != c for c in codes)
 
 
 # ---------------------------------------------------------------------------
@@ -146,17 +145,25 @@ def test_upstream_disaggregate_typo_is_patched_at_display_layer():
 # ---------------------------------------------------------------------------
 
 
-def test_duplicate_metric_id_is_recorded_not_silently_dropped():
-    m = md.metric(222)
-    assert m is not None
-    assert m.get("_duplicate_ids"), "the second m222 record should be recorded"
+def test_duplicate_metric_id_is_recorded_not_silently_dropped(monkeypatch):
+    """m222 was duplicated upstream until aee1e9ed; the guard stays."""
+    recs = [
+        {"metric_id": 1, "metric_full_name": "First"},
+        {"metric_id": 1, "metric_full_name": "Second"},
+    ]
+    monkeypatch.setattr(md, "_load", lambda _stem: recs)
+    m = md.metrics.__wrapped__()[1]
+    assert m["metric_full_name"] == "First"
+    assert m["_duplicate_ids"] == ["Second"]
 
 
 def test_validation_report_captures_known_defects():
     v = md.all_metadata_flags()
-    assert v["duplicate_metric_ids"] == {"222": 2}
-    assert set(UNDOCUMENTED_METRICS).issubset(set(v["in_data_no_metadata"]))
-    assert "d3_nodisab" in v["disag_in_data_not_in_metadata"]
+    assert v["in_tool_no_data"] == [222]
+    # Fixed upstream at aee1e9ed; the checks stay so a regression shows.
+    assert v["duplicate_metric_ids"] == {}
+    assert v["in_data_no_metadata"] == list(UNDOCUMENTED_METRICS)
+    assert v["disag_in_data_not_in_metadata"] == []
 
 
 # ---------------------------------------------------------------------------
@@ -165,7 +172,7 @@ def test_validation_report_captures_known_defects():
 
 
 def test_coverage_comes_from_data_not_years_available():
-    """metrics.json.years_available is unreliable — 22 metrics disagree."""
+    """metrics.json.years_available is unreliable — 23 metrics disagree."""
     v = md.all_metadata_flags()
     assert v["years_available_mismatch_count"] > 0
     bad = v["years_available_mismatch"][0]
@@ -247,7 +254,7 @@ def test_get_data_returns_values_with_provenance():
     )
     assert "Cook County, Illinois" in out
     assert "90.7%" in out
-    assert "eaaa0a29" in out, "must cite the pinned upstream commit"
+    assert UPSTREAM_COMMIT[:8] in out, "must cite the pinned upstream commit"
     assert "apps.urban.org" in out, "must offer a way to verify"
 
 
@@ -352,7 +359,7 @@ def test_search_with_no_query_lists_the_essential_questions():
 
 
 def test_absent_breakdown_is_stated_not_answered_with_totals():
-    """`income` (d7) is declared upstream and has zero rows anywhere."""
+    """`income` (d7) has rows for m50 alone; m83 has none."""
     out = srv.get_data(
         metric_ids="83", geo_level="county", geo_ids="17031",
         years="2021", disaggregate="income",
@@ -497,14 +504,13 @@ def test_disaggregates_component_marks_what_is_reachable():
 
 
 def test_income_is_reachable_via_d5_not_the_empty_d7():
-    """d7 is declared upstream with no rows; d5 is the one that answers."""
+    """d5 is the income dimension most metrics carry; d7 is m50 only."""
     status = dict(md.framework_disag_status())
     assert status["Income level"] == "d5"
 
 
 def test_crosswalk_never_marks_an_empty_dimension_queryable():
     live = loader.dimensions_in_data()
-    assert "d7" not in live
     for _name, prefix in md.framework_disag_status():
         assert prefix is None or prefix in live
 
@@ -595,7 +601,7 @@ def test_narrative_prose_is_attributed_to_mathematica_not_just_a_url():
 
 def test_narrative_is_present_and_attributed():
     pages = loader.narrative()
-    assert len(pages) == 96
+    assert len(pages) == 97
     page = pages["enrollment-public-pre-k"]
     assert page["definition"] and page["why_it_matters"]
     assert page["url"].startswith("https://educationtoworkforce.org/")

@@ -319,7 +319,7 @@ def main() -> int:
     print(f"framework.json — {size / 1e3:.0f} KB")
     expected = {
         "disaggregates": 26,
-        "evidence_based_practices": 26,
+        "evidence_based_practices": 25,
         "data_equity_principles": 8,
         "goals": 7,
         "faq": 8,
