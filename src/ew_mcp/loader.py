@@ -227,7 +227,7 @@ def disag_dimensions(metric_ids: list[int], geo_level: str | None = None) -> dic
     """Which disaggregate dimensions each metric ACTUALLY carries, from data.
 
     Needed because the metadata declares seven dimensions and the data carries
-    at most two for most metrics — `d7` (Income) has no rows anywhere. Without
+    at most two for most metrics — `d7` (Income) has rows for m50 alone. Without
     this the server answers a request for a breakdown that does not exist by
     silently returning the ungrouped total.
     """
@@ -249,8 +249,8 @@ def disag_dimensions(metric_ids: list[int], geo_level: str | None = None) -> dic
 def dimensions_in_data() -> frozenset[str]:
     """Disaggregate prefixes that have at least one row anywhere.
 
-    Distinct from what the metadata declares: d7 (Income) is declared upstream
-    and has no rows at all, so "declared" and "queryable" are different sets.
+    Distinct from what the metadata declares: d7 (Income) was declared upstream
+    with no rows at all until aee1e9ed, so "declared" and "queryable" can differ.
     """
     return frozenset(
         r[0] for r in query("select distinct substr(disag, 1, 2) from obs where disag is not null")

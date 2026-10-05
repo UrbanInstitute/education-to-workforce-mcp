@@ -168,7 +168,7 @@ def format_metric(metric_id: int, coverage: list[tuple], years: list[int]) -> st
         out.append(f"> {FIVE_YEAR_CAVEAT}\n\n")
 
     # Coverage is DERIVED from data. metrics.json.years_available disagreed with
-    # reality for 22 metrics in this build, so it is never reported as fact.
+    # reality for 23 metrics in this build, so it is never reported as fact.
     if coverage:
         out.append("**Coverage (derived from the data, not from metadata):**\n\n")
         out.append("| Level | Places | Years | Observations |\n|---|---|---|---|\n")

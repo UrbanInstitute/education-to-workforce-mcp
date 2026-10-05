@@ -57,7 +57,7 @@ mcp = MCPServer(
         "(E-W) Indicator Framework, which \"highlights key connections needed "
         "between systems to support students as they progress from early "
         'education through their career" (educationtoworkforce.org). Coverage '
-        "here: the US, states, counties and school districts, 2013-2022.\n\n"
+        "here: the US, states, counties and school districts, 2013-2023.\n\n"
 
         "WHO MADE WHAT — do not merge these. The FRAMEWORK is Mathematica's "
         "(Gonzalez et al., 2022, with the Gates Foundation and Mirror Group): the "
@@ -193,9 +193,9 @@ def _describe_disaggregates() -> str:
             out.append(f"- — {name}\n")
     out.append(
         "\n✓ = queryable here. — = recommended by the framework, not carried "
-        "by this dataset.\n\nNote that income appears in the metadata as a "
-        "band breakdown (`d7`) with no rows anywhere; economically "
-        "disadvantaged (`d5`) is the income-related dimension that has data.\n"
+        "by this dataset.\n\nNote that income bands (`d7`) exist only for m50, "
+        "workforce composition by income; economically disadvantaged (`d5`) is "
+        "the income-related dimension most metrics carry.\n"
     )
     out.append(f"\nFull guidance: {FRAMEWORK_URL}disaggregates\n")
     return _cap("".join(out)) + fmt.format_footer()
@@ -344,7 +344,7 @@ def describe(target: str) -> str:
     the framework's own page for it.
 
     Coverage is derived from the data rather than upstream metadata, which
-    disagrees with reality for 22 metrics.
+    disagrees with reality for 23 metrics.
 
     LINK PEOPLE TO THE SOURCE: every metric and indicator described here carries
     the framework's own page for it at educationtoworkforce.org. Pass that link
@@ -481,7 +481,7 @@ def get_data(
     State and national benchmarks are added automatically for a handful of
     places; demographic context is added for a whole state.
 
-    Coverage is uneven: districts carry ~35 metrics, counties ~62, and many
+    Coverage is uneven: districts carry ~35 metrics, counties ~63, and many
     places have no data for a given metric. "No data here" is a real finding —
     report it rather than substituting a different geography.
 

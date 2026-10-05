@@ -3,7 +3,7 @@
 # ---------------------------------------------------------------------------
 # The data is static JSON committed to this repo, NOT an API. 
 UPSTREAM_REPO = "UrbanInstitute/education-to-workforce"
-UPSTREAM_COMMIT = "eaaa0a299bd43868a2cb7c6cbb5d370c59df9272"
+UPSTREAM_COMMIT = "aee1e9ed9dd98b7ad8b001ab39af5e7ea1dee14a"
 UPSTREAM_RAW = f"https://raw.githubusercontent.com/{UPSTREAM_REPO}/{UPSTREAM_COMMIT}"
 
 # ---------------------------------------------------------------------------
@@ -52,8 +52,10 @@ GEO_LABEL = {
     "district": "School district",
 }
 
-# Census tracts exist upstream (3,144 files, 517 MB raw) but are deferred:
-# tract answers are thin and heavily suppressed, and they triple the build.
+# Census tracts exist upstream (3,144 files, 553 MB raw; 84K tracts, ~34M
+# observations) but are deferred: tract answers are thin and heavily suppressed,
+# they would roughly quadruple the store (~23 MB -> ~90 MB), and the build would
+# need to stream rather than hold every observation in memory.
 
 # ---------------------------------------------------------------------------
 # Value semantics — REQUIRED for correct rendering
@@ -97,18 +99,16 @@ FIVE_YEAR_CAVEAT = (
 # ---------------------------------------------------------------------------
 # Known upstream issues   
 # ---------------------------------------------------------------------------
-# These are upstream problems and not ours to correct. 
-# The build records them in a validation report and proceeds. 
+# These are upstream problems and not ours to correct.
+# The build records them in a validation report and proceeds.
 #
-#   * metric_id 222 appears TWICE with different metrics (child-care subsidies,
-#     SNAP participation). Both in_tool; neither has data.
-#   * m56, m57, m77, m224 carry real data with no metrics.json entry at all.
-#     (m190 and m50 also lack entries but are explained: context.json shows
-#     they are context variables, not tool metrics.)
-#   * m222 and m227 are in_tool with no data anywhere. Harmless: coverage is
-#     DERIVED from data, so they simply never appear.
-#   * m231-m234 have no source_label. We omit the provenance line rather than guess.
-UNDOCUMENTED_METRICS = (56, 57, 77, 224)
+#   * m222 is in_tool with no data anywhere. Harmless: coverage is DERIVED from
+#     data, so it simply never appears.
+#
+# Fixed upstream at aee1e9ed: the duplicate m222 record, the undocumented
+# m56/57/77/190/224 (now indicator 87), the d3_nodsab/d3_nodisab spelling, and
+# the blank m231-m234 source_labels. The build still checks for all of them.
+UNDOCUMENTED_METRICS: tuple[int, ...] = ()
 UNDOCUMENTED_METRIC_NOTE = (
     "No metadata is published upstream for this metric — its name, type and "
     "source are unknown. Values are shown as stored."
@@ -117,16 +117,16 @@ UNDOCUMENTED_METRIC_NOTE = (
 # ---------------------------------------------------------------------------
 # Framework disaggregates -> this dataset's dimensions
 # ---------------------------------------------------------------------------
-# The framework recommends 26 disaggregates; this data carries 7 declared, of
-# which 6 have any rows. The two vocabularies do not share wording ("Race and
+# The framework recommends 26 disaggregates; this data carries 7, all with rows
+# (d7 only since aee1e9ed, and only for m50). The two vocabularies do not share wording ("Race and
 # ethnicity" vs "Race or ethnicity", "Individuals experiencing homelessness" vs
 # "Experiencing homelessness"), so the mapping is written out rather than
 # guessed by string similarity — a near-miss here would mark a dimension
 # queryable that isn't.
 #
 # "Income level" maps to BOTH d5 and d7: the framework has one income concept,
-# the data splits it into economically-disadvantaged (d5, has rows) and income
-# bands (d7, declared upstream with no rows anywhere). Reachable via d5 only.
+# the data splits it into economically-disadvantaged (d5, most metrics) and
+# income bands (d7, only m50 workforce composition).
 FRAMEWORK_DISAG_CROSSWALK = {
     "Race and ethnicity": ("d1",),
     "Gender": ("d2",),
@@ -135,13 +135,6 @@ FRAMEWORK_DISAG_CROSSWALK = {
     "Income level": ("d5", "d7"),
     "Individuals experiencing homelessness": ("d6",),
 }
-
-# The ONE upstream defect we do patch, and only at the display layer.
-# The data uses `d3_nodisab`; disaggregates.json spells it `d3_nodsab`. It is
-# the only disaggregate value in the data with no metadata entry, and unpatched
-# it renders a real category as a bare code in user-facing output. This is a
-# label correction, never a data edit.
-DISAG_LABEL_FIXES = {"d3_nodisab": "Not individuals with disabilities"}
 
 # ---------------------------------------------------------------------------
 # Response budget

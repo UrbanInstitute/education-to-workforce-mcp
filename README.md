@@ -8,8 +8,8 @@ districts.
 The **framework** is [Mathematica's](https://educationtoworkforce.org/), written
 with the Bill & Melinda Gates Foundation. The **data tool** that compiles federal
 data against it is the [Urban Institute's](https://apps.urban.org/features/education-workforce-framework-data/).
-This server ships a compiled, pinned snapshot of that data — 11.8M observations
-in ~24 MB of Parquet — so it answers locally and makes no network calls.
+This server ships a compiled, pinned snapshot of that data — 12.2M observations
+in ~25 MB of Parquet — so it answers locally and makes no network calls.
 
 No API key required. Read-only.
 

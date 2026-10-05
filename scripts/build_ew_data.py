@@ -14,7 +14,7 @@ than silently repaired, so that every number the server emits is traceable to
 UPSTREAM_COMMIT.
 
 Outputs (into src/ew_mcp/data/):
-    ew.parquet          observations, sorted   (11.8M rows, ~27 MB)
+    ew.parquet          observations, sorted   (12.2M rows, ~24 MB)
     ew_names.parquet    geoid -> name          (14,090 places)
     ew_context.parquet  demographics, NO year dimension
     metadata/*.json     framework structure, verbatim upstream
@@ -124,7 +124,10 @@ def collect(cache: Path) -> tuple[list[tuple], dict, list[dict], list[str]]:
 
     print("  national + states…", flush=True)
     add("national", fetch_json(f"{UPSTREAM_RAW}/src/data/metrics/national.json", cache))
-    add("state", fetch_json(f"{UPSTREAM_RAW}/src/data/metrics/states.json", cache))
+    # The deployed tool reads static/data/metrics/states.json. A second copy at
+    # src/data/metrics/states.json still exists upstream and is NOT identical to
+    # it, so reading the wrong one would serve numbers the tool does not show.
+    add("state", fetch_json(f"{UPSTREAM_RAW}/static/data/metrics/states.json", cache))
 
     for level, folder in (("county", "counties"), ("district", "school_districts")):
         print(f"  {folder}… ", end="", flush=True)
